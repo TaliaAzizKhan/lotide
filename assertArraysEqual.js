@@ -1,9 +1,9 @@
-const assertArraysEqual = function(array1, array2) {
+const assertArraysEqual = function(actual, expected) {
   
-  if (eqArrays(array1, array2)) {
-    console.log(`✅✅✅ Assertion passed, Both Arrays are EQUAL: ${array1} === ${array2}`);
+  if (eqArrays(actual, expected)) {
+    console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
   } else {
-    console.log(`🛑🛑🛑  Assertion failed, Both Arrays are NOT-EQUAL: ${array1} !== ${array2}`);
+    console.log(`🛑🛑🛑  Assertion failed: ${actual} !== ${expected}`);
   }
 };
 
