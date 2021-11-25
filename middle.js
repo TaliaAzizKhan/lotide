@@ -33,17 +33,33 @@ const assertArraysEqual = function(actual, expected) {
 
 const middle = function(array) {
 
+  let totalElements = array.length;
 
+  if (totalElements < 3) {
+    return []; //return empty array
 
+  } else if (totalElements % 2 === 1) { // odd number of elements
+    return [array[Math.floor(totalElements / 2)]];
 
+  } else if (totalElements % 2 === 0) { // even number of elements
+    return [array[Math.round(totalElements / 2) - 1], array[Math.round(totalElements / 2)]];
+  }
+};
 
-
-}
 
 // TEST CODE
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
+console.log(middle([1])) // => []
+console.log(middle([1, 2])) // => []
+console.log(middle([1, 2, 3])) // => [2]
+console.log(middle([1, 2, 3, 4, 5])) // => [3]
+console.log(middle([1, 2, 3, 4])) // => [2, 3]
+console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
+
+
+
+assertArraysEqual(middle([1]), middle([1, 2])); // => passed
+assertArraysEqual(middle([1, 2, 3]), middle([1, 2, 3, 4, 5])); // => fail
+assertArraysEqual(middle([1, 2, 3, 4]), middle([1, 2, 3, 4, 5, 6])); // => fail
+assertArraysEqual(middle(["1", "2", "3"]), middle(["1", "2", 3])); // => pass
 
