@@ -26,8 +26,6 @@ const eqArrays = function(arr1, arr2) {
   return result;
 };
 
-
-
 // map
 
 const words = ["ground", "control", "to", "major", "tom"];
