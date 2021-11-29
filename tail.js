@@ -1,12 +1,5 @@
+const assertEqual = require('./assertEqual');
 
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑  Assertion failed: ${actual} !== ${expected}`);
-  }
-};
 // TEST CODE
 // Returns the tail of an array. ie, everything after the first element.
 
@@ -20,7 +13,6 @@ assertEqual(result.length, 2); // pass
 assertEqual(result[0], "Lighthouse"); // pass
 assertEqual(result[1], "Labs"); //pass
 assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
-
 
 
 // Test Case: Check the original array 
