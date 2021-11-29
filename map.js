@@ -44,3 +44,5 @@ const map = function(array, callback) {
 const results1 = map(words, word => word[0]);
 console.log(results1);
 
+assertArraysEqual(map(["one", "two", "three"], word => word[0]), ["o", "t", "t"]); // => true
+
