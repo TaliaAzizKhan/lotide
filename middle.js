@@ -1,3 +1,4 @@
+
 // TEST/ASSERTION FUNCTIONS
 
 //1-eqArrays
@@ -29,6 +30,7 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 
+
 // ACTUAL FUNCTION
 
 const middle = function(array) {
@@ -47,19 +49,9 @@ const middle = function(array) {
 };
 
 
-// TEST CODE
-
-console.log(middle([1])) // => []
-console.log(middle([1, 2])) // => []
-console.log(middle([1, 2, 3])) // => [2]
-console.log(middle([1, 2, 3, 4, 5])) // => [3]
-console.log(middle([1, 2, 3, 4])) // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
-
-
-
 assertArraysEqual(middle([1]), middle([1, 2])); // => passed
 assertArraysEqual(middle([1, 2, 3]), middle([1, 2, 3, 4, 5])); // => fail
 assertArraysEqual(middle([1, 2, 3, 4]), middle([1, 2, 3, 4, 5, 6])); // => fail
 assertArraysEqual(middle(["1", "2", "3"]), middle(["1", "2", 3])); // => pass
 
+module.exports = middle;
