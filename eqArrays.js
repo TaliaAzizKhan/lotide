@@ -1,6 +1,6 @@
 const assertEqual = require('./assertEqual');
 
-//Code
+//Function Code
 
 const eqArrays = function(arr1, arr2) {
   let result = true;
